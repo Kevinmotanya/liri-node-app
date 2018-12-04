@@ -26,6 +26,39 @@ Getting Started
 
    * [DotEnv](https://www.npmjs.com/package/dotenv)
    
+   ### Instructions
+
+1. Make a .gitignore file and add the following lines to it.
+
+```
+node_modules
+.DS_Store
+```
+
+2. Make a JavaScript file named `keys.js`. **Do Not** add this file to the .gitignore. 
+
+Inside keys.js your file will look like this:
+
+```Js
+console.log('this is loaded');
+
+exports.spotify = {
+  id: process.env.SPOTIFY_ID,
+  secret: process.env.SPOTIFY_SECRET
+};
+
+```
+
+3. Make a file called `random.txt`.
+
+   * Inside of `random.txt` put the following in with no extra characters or white space:
+     
+     * spotify-this-song,"I Want it That Way"
+
+4. Make a JavaScript file named `liri.js`.
+
+5. At the top of the `liri.js` file, write the code you need to grab the data from keys.js. Then store the keys in a variable.
+   
 
 ### What Each Command Should Do
 
