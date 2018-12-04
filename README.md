@@ -94,17 +94,17 @@ Getting Started
 
      * It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
 
-*Tech used
-Node.js
-Twitter NPM Package - npmjs.com/package/twitter
-Spotify NPM Package - npmjs.com/package/spotify
-Request NPM Package - npmjs.com/package/request
+### Tech used
+* Node.js
+* Twitter NPM Package - npmjs.com/package/twitter
+* Spotify NPM Package - npmjs.com/package/spotify
+* Request NPM Package - npmjs.com/package/request
 * Prerequisites
 - Node.js - Download the latest version of Node https://nodejs.org/en/
-* Built With
+### Built With
 Sublime Text - Text Editor
 
-* Authors
+### Authors
 Kevin Motanya - Node JS - Kevin Motanya
 
  
