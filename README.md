@@ -33,6 +33,7 @@ Getting Started
 ```
 node_modules
 .DS_Store
+.env
 ```
 
 2. Make a JavaScript file named `keys.js`. **Do Not** add this file to the .gitignore. 
