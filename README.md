@@ -28,7 +28,7 @@ Getting Started
    
    ### Instructions
 
-1. Make a .gitignore file and add the following lines to it.
+ 1. Make a .gitignore file and add the following lines to it.
 
 ```
 node_modules
