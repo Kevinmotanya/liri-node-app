@@ -26,7 +26,7 @@ Getting Started
 
    * [DotEnv](https://www.npmjs.com/package/dotenv)
    
-   ### Instructions
+ ### Instructions
 
  1. Make a .gitignore file and add the following lines to it.
 
