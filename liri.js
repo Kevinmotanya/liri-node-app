@@ -22,7 +22,7 @@ var liri = process.argv[2];
 var search = "";
 
 
-// the for loop sets minimun var lenght of a search's characters to 3
+// loop  through var i as long as the search params are more than 3 chars,.do search using the arguments from user input 
 for (var i = 3; i < myArgs.length; i++) {
 
   if (i > 3 && i < myArgs.length) {
@@ -39,7 +39,7 @@ switch (liri) {
   case "concert-this":
     if (search) {
       // console.log output that Liri is looking for concerts for the specified artist
-      console.log("\nGreat...These are the concerts I came across " + search + ".")
+      console.log("\nGreat...These are the concerts Kevin's liri came across " + search + ".")
       // function callback to find concerts
       findConcert(search);
     }
@@ -49,7 +49,7 @@ switch (liri) {
   case "spotify-this-song":
     if (search) {
       // console.log that Liri is sopotifying the song
-      console.log("\n This is what Spotify " + search + " has:")
+      console.log("\n This is what Kevin's liri Spotify search for " + search + "found")
       // call the spotifySong function
       spotifySong(search);
       // else (if Liri doesn't find the song, or no input was made, spotify will search for all the small things)
@@ -62,13 +62,13 @@ switch (liri) {
   case "movie-this":
     if (search) {
       // log that Liri is searching for the movie
-      console.log("\nNo problem...Let me check IMDB for " + search + ".")
+      console.log("\nSure...Kevin's liri IMDB has found" + search + ".")
       // call the getMovie function
       omdbMovie(search);
     } else {
       var search = "Mr. Nobody"
       //
-      console.log("If you haven't watched Mr. Nobody then you should: http://www.imdb.com/title/tt0485947/")
+      console.log("If you haven't watched Mr. Nobody then you should: http://www.imdb.com/title/tt0485947/ \n")
       console.log("It's on Netflix")
       omdbMovie(search);
     }
@@ -80,7 +80,7 @@ switch (liri) {
     break;
 
   default:
-    console.log("Do 'concert-this' followed by the artist\n,'spotify-this-song' followed by the song title\n','movie-this' followed by the movie title\n, or 'do-what-it-says'")
+    console.log("node liri.js concert-this' and artist\n, node liri.js spotify-this-song and a song title\n, node movie-this and the movie title\n, node liri.js do-what-it-says")
 
 }
 
@@ -99,13 +99,12 @@ function findConcert(search) {
         var concertInfo = JSON.parse(body)[i]
 
         // console.log the selected info for display while using moment for datetime display
-        console.log("\nResults from...")
-        console.log("---\nMoMeNtS---")
-        console.log("Venue: " + concertInfo.venue.name)
-        console.log("City: " + concertInfo.venue.city)
+        console.log("\nResults from bandsintown...with moments date format")
+        console.log("Name of venue: " + concertInfo.venue.name)
+        console.log("Location: " + concertInfo.venue.city)
         //date format MM/DD/YYYY
-        console.log(moment(concertInfo.datetime).format("MM/DD/YYYY"));
-         console.log("=x=x=x=Do another Search=x=x=x=")
+        console.log("EventDate:" + moment(concertInfo.datetime).format("MM/DD/YYYY"));
+         console.log("=x=xxx=xx=Do another Search=x=xx=xxx=")
       }
 
     }
@@ -131,9 +130,8 @@ function spotifySong(search) {
       //spotify returns 20 results but we set our item to just one result [0]
       //var songInfo=info.tracks.items[0]
       var songInfo = info.tracks.items[0]
-       console.log("\nResults from...")
-      console.log("---\nSpOtIfy----")
-      //prints out the artist name
+      
+            //prints out the artist name
       console.log("Artist: " + songInfo.artists[0].name);
       //prints out the artist name
       console.log("Song Title: " + songInfo.name);
@@ -141,7 +139,7 @@ function spotifySong(search) {
       console.log("Listen Here: " + songInfo.preview_url);
       //prints out the album name
       console.log("Album Title: " + songInfo.album.name);
-      console.log("=x=x=x=Do another Search=x=x=x=")
+      console.log("=x=xxx=xx=Do another Search=x=xx=xxx=")
     }
 
   })
@@ -181,7 +179,7 @@ function omdbMovie(search) {
       console.log("Actors: " + movieInfo.Actors)
        //plot of the movie
       console.log("\nPlot: " + movieInfo.Plot)
-     console.log("=x=x=x=Do another Search=x=x=x=")
+      console.log("=x=xxx=xx=Do another Search=x=xx=xxx=")
     }
   });
 }

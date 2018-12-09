@@ -20,6 +20,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "dotenv": "^6.2.0",
-    "moment": "^2.22.2"
+    "inquirer": "^6.2.1",
+    "moment": "^2.22.2",
+    "request": "^2.88.0"
   }
 }
